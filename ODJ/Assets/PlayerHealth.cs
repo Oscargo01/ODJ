@@ -28,7 +28,6 @@ public class PlayerHealth : MonoBehaviour
         bool touchingEnemy1 = Physics2D.OverlapCircle(feetPos.position, checkRadius, enemy);
         bool touchingEnemy2 = Physics2D.OverlapCircle(headPos.position, checkRadius, enemy); ;
         touchingEnemy = touchingEnemy1 || touchingEnemy2;
-        Debug.Log("Holi");
         if (touchingEnemy)
         {
             TakeDamage(20);

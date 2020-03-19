@@ -398,7 +398,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 100
   healthBar: {fileID: 1691630820}
-  checkRadius: 0.1
+  checkRadius: 0.36
   enemy:
     serializedVersion: 2
     m_Bits: 512
