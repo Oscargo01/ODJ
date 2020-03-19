@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 92195884}
   - component: {fileID: 92195883}
   - component: {fileID: 92195888}
+  - component: {fileID: 92195890}
   - component: {fileID: 92195882}
   - component: {fileID: 92195889}
   - component: {fileID: 92195885}
@@ -374,15 +375,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b054870b62c16634198fccd674db0bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
   controller: {fileID: 92195882}
   feetPos: {fileID: 200708081}
   jumpForce: 10.16
   runSpeed: 100
+  rb: {fileID: 0}
   checkRadius: 0.13
   whatIsGround:
-    serializedVersion: 2
     m_Bits: 256
+  isGrounded: 1
+  doubleJump: 0
   dashDistance: 25
+  horizontalMove: 0
+  counter: 0
+  dash: 0
+  jump: 0
 --- !u!114 &92195889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,6 +426,27 @@ MonoBehaviour:
   feetPos: {fileID: 200708081}
   headPos: {fileID: 862058326}
   timeBetweenDamage: 1
+--- !u!114 &92195890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92195881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee670bd13a57f114da45b29aae6095b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 92195882}
+  feetPos: {fileID: 200708081}
+  jumpForce: 10
+  runSpeed: 150
+  checkRadius: 0.4
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
+  dashDistance: 10
 --- !u!1 &133028087
 GameObject:
   m_ObjectHideFlags: 0
