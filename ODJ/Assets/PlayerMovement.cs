@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask whatIsGround;
     bool isGrounded = true;
     int doubleJump = 0;
+    bool doubleTapD = false;
+    float _doubleTapTimeD;
     public float dashDistance;
 
     float horizontalMove = 0f;
@@ -47,15 +49,23 @@ public class PlayerMovement : MonoBehaviour
                 doubleJump++;
             }     
         }
-        if (doubleJump <=1 && Input.GetKeyDown(KeyCode.Space)){
+        if (doubleJump <=1 && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)))
+        {
 
                 rb.velocity = Vector2.up * jumpForce;
                 doubleJump++;
 
        }
-        if (dash<1 && Input.GetKeyDown(KeyCode.LeftShift)){
-            controller.Move(horizontalMove * Time.fixedDeltaTime * 17, false, jump);
-            dash++;
+        if (dash<1 && (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)|| Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)))
+        {
+            if (Time.time < _doubleTapTimeD + .3f)
+            {
+                doubleTapD = true;
+                controller.Move(horizontalMove * Time.fixedDeltaTime * 17, false, jump);
+                dash++;
+            }
+            _doubleTapTimeD = Time.time;
+            
         }
 
     }
