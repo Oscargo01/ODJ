@@ -404,6 +404,7 @@ MonoBehaviour:
     m_Bits: 512
   feetPos: {fileID: 200708081}
   headPos: {fileID: 862058326}
+  timeBetweenDamage: 1
 --- !u!1 &133028087
 GameObject:
   m_ObjectHideFlags: 0

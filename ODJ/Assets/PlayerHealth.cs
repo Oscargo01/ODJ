@@ -14,6 +14,8 @@ public class PlayerHealth : MonoBehaviour
     bool touchingEnemy = false;
     public Transform feetPos;
     public Transform headPos;
+    public float timeBetweenDamage;
+    float time=0;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,7 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        time+=Time.deltaTime;
         bool touchingEnemy1 = Physics2D.OverlapCircle(feetPos.position, checkRadius, enemy);
         bool touchingEnemy2 = Physics2D.OverlapCircle(headPos.position, checkRadius, enemy); ;
         touchingEnemy = touchingEnemy1 || touchingEnemy2;
@@ -36,9 +39,12 @@ public class PlayerHealth : MonoBehaviour
 
     void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-
-        healthBar.SetHealth(currentHealth);
+        if (time > timeBetweenDamage)
+        {
+            currentHealth -= damage;
+            healthBar.SetHealth(currentHealth);
+            time = 0;
+        }   
     }
 
 }
