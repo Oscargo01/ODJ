@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius,whatIsGround);
+
         if (isGrounded==true)
         {
             dash = 0;

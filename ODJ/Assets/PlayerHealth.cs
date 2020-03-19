@@ -8,6 +8,12 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth;
 
     public HealthBar healthBar;
+    public float checkRadius;
+
+    public LayerMask enemy;
+    bool touchingEnemy = false;
+    public Transform feetPos;
+    public Transform headPos;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +25,11 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        bool touchingEnemy1 = Physics2D.OverlapCircle(feetPos.position, checkRadius, enemy);
+        bool touchingEnemy2 = Physics2D.OverlapCircle(headPos.position, checkRadius, enemy); ;
+        touchingEnemy = touchingEnemy1 || touchingEnemy2;
+        Debug.Log("Holi");
+        if (touchingEnemy)
         {
             TakeDamage(20);
         }
