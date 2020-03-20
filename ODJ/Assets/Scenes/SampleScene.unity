@@ -375,35 +375,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b054870b62c16634198fccd674db0bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 92195882}
-  feetPos: {fileID: 200708081}
-  jumpForce: 10.16
-  runSpeed: 100
-  rb: {fileID: 0}
-  checkRadius: 0.13
-  whatIsGround:
-    m_Bits: 256
-  isGrounded: 1
-  doubleJump: 0
-  dashDistance: 25
-  horizontalMove: 0
-  counter: 0
-  dash: 0
-  jump: 0
 --- !u!114 &92195889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,12 +412,12 @@ MonoBehaviour:
   controller: {fileID: 92195882}
   feetPos: {fileID: 200708081}
   jumpForce: 10
-  runSpeed: 150
+  runSpeed: 85
   checkRadius: 0.4
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  dashDistance: 10
+  dashDistance: 8
 --- !u!1 &133028087
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,8 +753,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: 2}
-  m_SizeDelta: {x: 43.1, y: 44.675}
+  m_AnchoredPosition: {x: 7.8, y: -0.0000042915}
+  m_SizeDelta: {x: 39.06, y: 40.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &483595878
 MonoBehaviour:
@@ -1041,8 +1012,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 218, y: -111}
-  m_SizeDelta: {x: 249.9, y: 34.200012}
+  m_AnchoredPosition: {x: 92.9, y: -19.5}
+  m_SizeDelta: {x: 151.6, y: 17.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1691630819
 MonoBehaviour:
