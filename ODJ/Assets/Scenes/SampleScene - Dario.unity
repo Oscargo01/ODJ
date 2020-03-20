@@ -423,7 +423,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 100
   healthBar: {fileID: 1691630820}
-  checkRadius: 0.07
+  checkRadius: 0.04
   enemy:
     serializedVersion: 2
     m_Bits: 512
@@ -448,7 +448,7 @@ MonoBehaviour:
   feetPos: {fileID: 200708081}
   jumpForce: 10
   runSpeed: 40
-  checkRadius: 0.15
+  checkRadius: 0.06
   whatIsGround:
     serializedVersion: 2
     m_Bits: 768
