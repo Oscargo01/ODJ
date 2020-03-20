@@ -383,7 +383,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.019190758, y: 0.022228092}
+  m_Offset: {x: -0.030787446, y: 0.022228092}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -394,7 +394,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.27829707, y: 0.21017373}
+  m_Size: {x: 0.24870227, y: 0.21017373}
   m_EdgeRadius: 0
 --- !u!114 &92195888
 MonoBehaviour:
@@ -448,7 +448,7 @@ MonoBehaviour:
   feetPos: {fileID: 200708081}
   jumpForce: 10
   runSpeed: 40
-  checkRadius: 0.25
+  checkRadius: 0.15
   whatIsGround:
     serializedVersion: 2
     m_Bits: 768
@@ -1087,7 +1087,7 @@ GameObject:
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
-  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
