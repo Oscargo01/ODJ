@@ -8,13 +8,32 @@ public class Combat : MonoBehaviour
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
 
-    public int attackDamage = 27;
+    public int attackDamage = 30;
+
+    bool vivo;
+
+    void Start()
+    {
+        vivo = true;
+    }
     // Update is called once per frame
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C)&& !vivo)
         {
             Attack();
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (vivo)
+            {
+                vivo = false;
+            }
+            else
+            {
+                vivo = true;
+            }
         }
     }
     void Attack()
