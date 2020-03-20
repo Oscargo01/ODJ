@@ -47,14 +47,14 @@ public class PlayerMovement : MonoBehaviour
                 doubleJump++;
             }     
         }
-        if (doubleJump <=1 && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)))
+        if (doubleJump <=1 && Input.GetKeyDown(KeyCode.Z))
         {
 
                 rb.velocity = Vector2.up * jumpForce;
                 doubleJump++;
 
        }
-        if (dash<1 && (Input.GetKeyDown(KeyCode.LeftShift))){ 
+        if (dash<1 && (Input.GetKeyDown(KeyCode.X))){ 
             controller.Move(horizontalMove * Time.fixedDeltaTime * dashDistance, false, jump);
             dash++;
         }
