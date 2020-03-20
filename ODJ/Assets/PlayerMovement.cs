@@ -23,6 +23,11 @@ public class PlayerMovement : MonoBehaviour
 
     bool jump = false;
 
+    public bool vivo;
+
+    public Sprite mySprite;
+
+    public Sprite mySprite2;
 
     // Start is called before the first frame update
     void Start()
@@ -49,7 +54,6 @@ public class PlayerMovement : MonoBehaviour
         }
         if (doubleJump <=1 && Input.GetKeyDown(KeyCode.Z))
         {
-
                 rb.velocity = Vector2.up * jumpForce;
                 doubleJump++;
 
@@ -57,6 +61,20 @@ public class PlayerMovement : MonoBehaviour
         if (dash<1 && (Input.GetKeyDown(KeyCode.X))){ 
             controller.Move(horizontalMove * Time.fixedDeltaTime * dashDistance, false, jump);
             dash++;
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (vivo)
+            {
+                this.GetComponent<SpriteRenderer>().sprite = mySprite;
+                vivo = false;
+            }
+            else
+            {
+                this.GetComponent<SpriteRenderer>().sprite = mySprite2;
+                vivo = true;
+            }
+            
         }
 
     }

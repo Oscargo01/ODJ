@@ -14,6 +14,8 @@ public class PlayerHealth : MonoBehaviour
     bool touchingEnemy = false;
     public Transform feetPos;
     public Transform headPos;
+    public Transform frontPos;
+    public Transform backPos;
     public float timeBetweenDamage;
     float time=0;
 
@@ -29,8 +31,10 @@ public class PlayerHealth : MonoBehaviour
     {
         time+=Time.deltaTime;
         bool touchingEnemy1 = Physics2D.OverlapCircle(feetPos.position, checkRadius, enemy);
-        bool touchingEnemy2 = Physics2D.OverlapCircle(headPos.position, checkRadius, enemy); ;
-        touchingEnemy = touchingEnemy1 || touchingEnemy2;
+        bool touchingEnemy2 = Physics2D.OverlapCircle(headPos.position, checkRadius, enemy);
+        bool touchingEnemy3 = Physics2D.OverlapCircle(frontPos.position, checkRadius, enemy);
+        bool touchingEnemy4 = Physics2D.OverlapCircle(backPos.position, checkRadius, enemy);
+        touchingEnemy = touchingEnemy1 || touchingEnemy2|| touchingEnemy3||touchingEnemy4;
         if (touchingEnemy)
         {
             TakeDamage(20);
