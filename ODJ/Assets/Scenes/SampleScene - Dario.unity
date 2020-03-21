@@ -229,11 +229,12 @@ GameObject:
   - component: {fileID: 92195890}
   - component: {fileID: 92195882}
   - component: {fileID: 92195889}
+  - component: {fileID: 92195894}
   - component: {fileID: 92195885}
   - component: {fileID: 92195893}
   - component: {fileID: 92195887}
-  - component: {fileID: 92195886}
   - component: {fileID: 92195891}
+  - component: {fileID: 92195886}
   m_Layer: 0
   m_Name: player-idle-1
   m_TagString: Untagged
@@ -371,9 +372,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.038925886, y: -0.15912032}
+  m_Offset: {x: 0.013944313, y: 0.1580356}
   serializedVersion: 2
-  m_Radius: 0.13496065
+  m_Radius: 0.12970077
 --- !u!61 &92195887
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -387,7 +388,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.040050354, y: 0.022228092}
+  m_Offset: {x: -0.034509115, y: -0.020873994}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -398,7 +399,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.23017645, y: 0.21017373}
+  m_Size: {x: 0.25309324, y: 0.30183583}
   m_EdgeRadius: 0
 --- !u!114 &92195888
 MonoBehaviour:
@@ -410,6 +411,72 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b054870b62c16634198fccd674db0bdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &92195889
@@ -460,6 +527,7 @@ MonoBehaviour:
   vivo: 0
   mySprite: {fileID: 21300000, guid: 6d60efa728475bb4498f0c7909d84aec, type: 3}
   mySprite2: {fileID: 21300000, guid: a86fabb3151544d25b4310ff397f732a, type: 3}
+  animator: {fileID: 92195894}
 --- !u!58 &92195891
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -473,9 +541,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.009339407, y: 0.16250613}
+  m_Offset: {x: -0.03613329, y: -0.16888112}
   serializedVersion: 2
-  m_Radius: 0.11895119
+  m_Radius: 0.13075244
 --- !u!114 &92195892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,6 +577,25 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   attackDamage: 30
+--- !u!95 &92195894
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92195881}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: abd68e6fb0c89934f97aa9a0e2131f96, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &133028087
 GameObject:
   m_ObjectHideFlags: 0

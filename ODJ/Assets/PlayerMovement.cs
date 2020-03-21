@@ -29,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Sprite mySprite2;
 
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius,whatIsGround);
+
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+      
 
         if (isGrounded==true)
         {
@@ -64,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            animator.SetBool("isAlive", vivo);
             if (vivo)
             {
                 this.GetComponent<SpriteRenderer>().sprite = mySprite;
