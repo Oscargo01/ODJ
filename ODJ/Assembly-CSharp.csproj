@@ -63,14 +63,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Bullet.cs" />
     <Compile Include="Assets\ChangeBackground.cs" />
     <Compile Include="Assets\ChangeEnemies.cs" />
     <Compile Include="Assets\CharacterController2D.cs" />
     <Compile Include="Assets\Combat.cs" />
+    <Compile Include="Assets\EnemyAI.cs" />
     <Compile Include="Assets\EnemyHealth.cs" />
     <Compile Include="Assets\EnemyMovement.cs" />
+    <Compile Include="Assets\Firing.cs" />
     <Compile Include="Assets\HealthBar.cs" />
-    <Compile Include="Assets\Holi.cs" />
     <Compile Include="Assets\MovimientoCamara.cs" />
     <Compile Include="Assets\PlayerHealth.cs" />
     <Compile Include="Assets\PlayerMovement.cs" />
