@@ -7,7 +7,7 @@ public class Combat : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
-
+    public Animator animator;
     public int attackDamage = 30;
 
     bool vivo;
@@ -22,6 +22,7 @@ public class Combat : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C)&& !vivo)
         {
+            animator.SetTrigger("Attack");
             Attack();
         }
         if (Input.GetKeyDown(KeyCode.Space))

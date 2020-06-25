@@ -72,12 +72,12 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isAlive", vivo);
             if (vivo)
             {
-                this.GetComponent<SpriteRenderer>().sprite = mySprite;
+                //this.GetComponent<SpriteRenderer>().sprite = mySprite;
                 vivo = false;
             }
             else
             {
-                this.GetComponent<SpriteRenderer>().sprite = mySprite2;
+                //this.GetComponent<SpriteRenderer>().sprite = mySprite2;
                 vivo = true;
             }
             

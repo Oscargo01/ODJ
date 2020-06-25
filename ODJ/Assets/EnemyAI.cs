@@ -12,6 +12,9 @@ public class EnemyAI : MonoBehaviour
     public Transform groundDetection;
     public float checkRadius;
     public LayerMask whatIsGround;
+    public Sprite mySprite;
+
+    public Sprite mySprite2;
     bool isGrounded = true;
     public Transform enemyPosF;
     GameObject player;
@@ -33,6 +36,7 @@ public class EnemyAI : MonoBehaviour
             float fixedSpeed = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, initialPosition, fixedSpeed);
             contador = 1;
+            this.GetComponent<SpriteRenderer>().sprite = mySprite;
         }
         else
         {
@@ -42,12 +46,13 @@ public class EnemyAI : MonoBehaviour
                 target = player.transform.position;
                 float fixedSpeed = speed * Time.deltaTime;
                 transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
+                this.GetComponent<SpriteRenderer>().sprite = mySprite2;
+                transform.eulerAngles = target - transform.position;
             }
             else
             {
 
                 transform.Translate(Vector2.right * speed * Time.deltaTime);
-
                 RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, distance);
 
                 isGrounded = Physics2D.OverlapCircle(enemyPosF.position, checkRadius, whatIsGround);
@@ -64,6 +69,7 @@ public class EnemyAI : MonoBehaviour
                         movingRight = true;
                     }
                 }
+                this.GetComponent<SpriteRenderer>().sprite = mySprite;
             }
         
         }
@@ -80,4 +86,5 @@ public class EnemyAI : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, visionRadius);
     }
+
 }
