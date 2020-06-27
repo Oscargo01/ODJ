@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public GameObject enemigo;
+    public Rigidbody2D pos;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,11 +18,11 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHealth -= damage;
         Vector3 pushForce = new Vector3(200, 0, 0);
-       // float num = enemigo.GetComponent<Rigidbody2D>.position.x;
-        //if (num < xpos)
-        //{
-         //   pushForce = -pushForce;
-       // }
+        float num = pos.position.x;
+        if (num < xpos)
+        {
+            pushForce = -pushForce;
+        }
         enemigo.GetComponent<Rigidbody2D>().AddForce(pushForce);
         if (currentHealth <= 0)
         {

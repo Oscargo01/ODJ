@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class CambiarArmaAtaque2 : MonoBehaviour
 {
-
+    public float tiempo;
     public Sprite mySprite;
-public float tiempo;
-
     public Sprite mySprite2;
 
     bool isAlive = true;
@@ -15,8 +13,8 @@ public float tiempo;
     // Start is called before the first frame update
     void Start()
     {
-this.GetComponent<SpriteRenderer>().sprite = mySprite;
-    first=true;
+        this.GetComponent<SpriteRenderer>().sprite = mySprite;
+        first=true;
     }
 
     // Update is called once per frame
@@ -35,6 +33,6 @@ this.GetComponent<SpriteRenderer>().sprite = mySprite;
 
         //After we have waited 5 seconds print the time again.
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
-    this.GetComponent<SpriteRenderer>().sprite = mySprite;
+        this.GetComponent<SpriteRenderer>().sprite = mySprite;
     }
 }
