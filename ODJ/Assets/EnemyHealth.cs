@@ -13,11 +13,17 @@ public class EnemyHealth : MonoBehaviour
         currentHealth = maxHealth;
     }
     
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage,float xpos)
     {
         currentHealth -= damage;
-
-        if(currentHealth <= 0)
+        Vector3 pushForce = new Vector3(200, 0, 0);
+       // float num = enemigo.GetComponent<Rigidbody2D>.position.x;
+        //if (num < xpos)
+        //{
+         //   pushForce = -pushForce;
+       // }
+        enemigo.GetComponent<Rigidbody2D>().AddForce(pushForce);
+        if (currentHealth <= 0)
         {
             Die();
         }
